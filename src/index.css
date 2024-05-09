@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary-color: #184E77;
+    --secondary-color: #34A0A4;
+
+    --accent-color-1: #52B69A;
+    --accent-color-2: #D9ED92;
+
+    --accent-stars-color: #FFCE31;
+    --accent-success-color: #00FF37;
+    --accent-error-color: #FF3D00;
+
+    --dark-color: #06141E;
+    --light-color: #FDFEF9;
+
+    --font-family: 'Montserrat', sans-serif;
+    --font-family-2: 'Montserrat', sans-serif;
+
+    --blue-50: #34A0A4;
+    --blue-100: #2595A9;
+    --blue-200: #168AAD;
+    --blue-300: #1A759F;
+    --blue-400: #1E6091;
+    --blue-500: #1B5784;
+    --blue-600: #184E77;
+    --blue-700: #154569;
+    --blue-800: #123B5A;
+    --blue-900: #0F314B;
+
+    --green-50: #ECF6C9;
+    --green-100: #E3F2AE;
+    --green-200: #D9ED92;
+    --green-300: #C7E98F;
+    --green-400: #B5E48C;
+    --green-500: #99D98C;
+    --green-600: #76C893;
+    --green-700: #52B69A;
+    --green-800: #3E8974;
+    --green-900: #295B4D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    letter-spacing: -0.25px;
+    text-decoration: none;
+    color: var(--dark-color);
+    font-family: var(--font-family);
+}
+
+body {
+    background-color: var(--light-color);
+}

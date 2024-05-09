@@ -1,0 +1,40 @@
+.signup_inputContainer {
+    width: 100%;
+
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.signup_inputContainer_label {
+    font-size: 18px;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+.signup_inputContainer_input {
+    width: 500px;
+
+    padding: 7px;
+
+    outline: none;
+    border: 1px solid var(--primary-color);
+
+    transition: 300ms ease;
+}
+
+.signup_inputContainer_input:focus {
+    box-shadow: rgba(82, 182, 154, 0.5) 0px 2px 8px 0px;
+    border: 1px solid var(--accent-color-1);
+}
+
+.signup_inputContainer_input::placeholder {
+    opacity: 0.7;
+}
+
+.signup_inputContainer_error {
+    max-width: 400px;
+
+    font-size: 14px;
+    color: var(--accent-error-color);
+}
