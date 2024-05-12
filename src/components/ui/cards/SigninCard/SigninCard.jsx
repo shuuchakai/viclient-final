@@ -1,31 +1,30 @@
 import axios from 'axios';
 import * as yup from 'yup';
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-import SignupInputContainer from '../../inputs/SignupInputContainer/SignupInputContainer';
+import SigninInputContainer from '../../inputs/SigninInputContainer/SigninInputContainer';
 import FormButtonContainer from '../../buttons/FormButtonContainer/FormButtonContainer';
 
-import './SignupCard.css';
+import './SigninCard.css';
 
 import { API_URL } from '../../../../utils/constants';
 
-import schema from '../../../../utils/schemas/signup.schema';
+import schema from '../../../../utils/schemas/signin.schema';
 
-function SignupCard() {
-    const [name, setName] = useState('');
+function SigninCard() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState({ name: null, email: null, password: null });
+    const [error, setError] = useState({ email: null, password: null });
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     const navigate = useNavigate();
 
     useEffect(() => {
         if (isSubmitting) {
-            const registerUser = async () => {
+            const loginUser = async () => {
                 try {
-                    const response = await axios.post(API_URL+'/users/register', { name, email, password });
+                    const response = await axios.post(API_URL + '/users/login', { email, password });
 
                     const ifUser = localStorage.getItem('user');
 
@@ -38,16 +37,16 @@ function SignupCard() {
                     navigate('/verify-email');
                 } catch (error) {
                     console.error(error);
-                    setError({ api: 'Error al registrarse. Por favor, inténtalo de nuevo.' });
+                    setError({ api: 'Error al iniciar sesión. Por favor, inténtalo de nuevo.' });
                 }
             };
 
-            registerUser();
+            loginUser();
         }
     }, [isSubmitting]);
 
     const validateForm = async () => {
-        const fields = { name, email, password };
+        const fields = { email, password };
         let errors = {};
 
         for (const field in fields) {
@@ -60,9 +59,9 @@ function SignupCard() {
             }
         }
 
-        if (Object.keys(errors).length > 0) {
-            setError(errors);
-        } else {
+        setError(errors);
+
+        if (Object.keys(errors).length === 0) {
             setIsSubmitting(true);
         }
     };
@@ -75,38 +74,33 @@ function SignupCard() {
     return (
         <div className="signup_cardContainer">
             <form className="signup_cardContainer_form" onSubmit={handleSubmit}>
-                <SignupInputContainer
-                    inputType="text"
-                    labelContent="Nombre"
-                    inputPlaceholder="Introduce tu nombre completo"
-                    inputValue={name}
-                    inputOnChange={(event) => setName(event.target.value)}
-                    inputError={error.name}
-                />
-                <SignupInputContainer
-                    inputType="text"
-                    labelContent="Correo Electrónico"
+                <SigninInputContainer
+                    labelContent={"Correo Electrónico"}
+                    inputType="email"
                     inputPlaceholder="Introduce tu correo electrónico"
                     inputValue={email}
                     inputOnChange={(event) => setEmail(event.target.value)}
                     inputError={error.email}
                 />
-                <SignupInputContainer
+                <SigninInputContainer
+                    labelContent={"Contraseña"}
                     inputType="password"
-                    labelContent="Contraseña"
                     inputPlaceholder="Introduce tu contraseña"
                     inputValue={password}
                     inputOnChange={(event) => setPassword(event.target.value)}
                     inputError={error.password}
                 />
-                <FormButtonContainer buttonOnClick={handleSubmit}>Crear Cuenta</FormButtonContainer>
+                <FormButtonContainer
+                    buttonOnClick={validateForm}
+                    children={"Iniciar Sesión"}
+                />
             </form>
             <div className="signup_cardContainer_bottom">
-                <p className="signup_cardContainer_bottomTitle">¿Ya tienes una cuenta?</p>
-                <Link to="/signin" className="signup_cardContainer_bottomLink">Inicia Sesión</Link>
+                <p className="signup_cardContainer_bottomTitle">¿No tienes una cuenta aún?</p>
+                <Link to="/signup" className="signup_cardContainer_bottomLink">Crea una</Link>
             </div>
         </div>
     )
-};
+}
 
-export default SignupCard;
+export default SigninCard
