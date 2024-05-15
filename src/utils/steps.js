@@ -111,7 +111,17 @@ const steps = [
         ]
     },
     {
-        question: ''
+        question: '¿Tienes alguna enfermedad crónica?',
+        answerType: 'text',
+        answerKey: 'disease',
+        placeholder: 'Escribe aquí tus enfermedades',
+        idea: [
+            'Las enfermedades crónicas, como la diabetes, la hipertensión y las enfermedades cardíacas, pueden requerir un manejo cuidadoso a través de la dieta, el ejercicio y la medicación.',
+            'El manejo de las enfermedades crónicas puede requerir la colaboración de un equipo de atención médica, que puede incluir médicos, enfermeras, dietistas y otros profesionales de la salud.',
+            'El seguimiento regular de la enfermedad y el cumplimiento del plan de tratamiento son fundamentales para controlar los síntomas y prevenir complicaciones a largo plazo.',
+            'Las enfermedades crónicas pueden afectar la calidad de vida y la capacidad de realizar actividades diarias, por lo que es importante buscar apoyo emocional y social cuando sea necesario.',
+            'Las enfermedades crónicas pueden requerir ajustes en la dieta y el estilo de vida, así como la toma de medicamentos según las indicaciones del médico para mantener la salud y prevenir complicaciones.'
+        ]
     }
 ];
 

@@ -47,7 +47,7 @@ function Questionary() {
                     <div className="questionary_inputContainer">
                         <p className="questionary_inputContainer_title">{steps[step].question}</p>
                         {steps[step].answerType === 'select' && (
-                            <select className="questionary_inputContainer_select" onBlur={handleAnswer(steps[step].answerKey)} defaultValue={answers[steps[step].answerKey]}>
+                            <select className="questionary_inputContainer_select" onChange={handleAnswer(steps[step].answerKey)} value={answers[steps[step].answerKey] || ''}>
                                 <option className="questionary_inputContainer_option" value="">Selecciona...</option>
                                 {steps[step].options.map((option, index) => (
                                     <option className="questionary_inputContainer_option" key={index} value={option.value}>{option.label}</option>
@@ -57,7 +57,11 @@ function Questionary() {
                         {steps[step].answerType === 'text' && (
                             <input
                                 placeholder={steps[step].placeholder || ''}
-                                className="questionary_inputContainer_input" type="text" onBlur={handleAnswer(steps[step].answerKey)} defaultValue={answers[steps[step].answerKey]} />
+                                className="questionary_inputContainer_input"
+                                type="text"
+                                onChange={handleAnswer(steps[step].answerKey)}
+                                value={answers[steps[step].answerKey] || ''}
+                            />
                         )}
                     </div>
                 )}
