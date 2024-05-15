@@ -24,7 +24,7 @@
 }
 
 .signup_inputContainer_input:focus {
-    box-shadow: rgba(82, 182, 154, 0.5) 0px 2px 8px 0px;
+    box-shadow: rgba(82, 182, 154, 0.5) 0px 2px 8px 0px;    
     border: 1px solid var(--accent-color-1);
 }
 

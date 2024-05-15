@@ -25,7 +25,7 @@ function SignupCard() {
         if (isSubmitting) {
             const registerUser = async () => {
                 try {
-                    const response = await axios.post(API_URL+'/users/register', { name, email, password });
+                    const response = await axios.post(API_URL + '/users/register', { name, email, password });
 
                     const ifUser = localStorage.getItem('user');
 
@@ -63,6 +63,7 @@ function SignupCard() {
         if (Object.keys(errors).length > 0) {
             setError(errors);
         } else {
+            setError({ name: null, email: null, password: null }); // Limpia los errores
             setIsSubmitting(true);
         }
     };

@@ -1,0 +1,153 @@
+.questionary {
+    width: 100vw;
+    height: 100vh;
+
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.questionary_title {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.questionary_title span {
+    color: var(--accent-color-1);
+}
+
+.questionary_subtitle {
+    width: 800px;
+
+    text-align: center;
+
+    opacity: 0.7;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.questionary_container {
+    width: 600px;
+    min-height: 400px;
+    max-height: 100%;
+
+    margin: 20px;
+
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: var(--white);
+    border: 1px solid var(--accent-color-1);
+    box-shadow: rgba(82, 182, 154, 0.5) 0px 2px 8px 0px;
+}
+
+.questionary_inputContainer {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.questionary_inputContainer_title {
+    margin: 10px;
+
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.questionary_inputContainer_select {
+    width: 70%;
+    height: 40px;
+
+    padding: 7px;
+
+    outline: none;
+    border: 1px solid var(--primary-color);
+
+    transition: 300ms ease;
+}
+
+.questionary_inputContainer_select:focus {
+    box-shadow: rgba(82, 182, 154, 0.5) 0px 2px 8px 0px;
+    border: 1px solid var(--accent-color-1);
+}
+
+.questionary_inputContainer_input {
+    width: 70%;
+    height: 40px;
+
+    padding: 7px;
+
+    outline: none;
+    border: 1px solid var(--primary-color);
+
+    transition: 300ms ease;
+}
+
+.questionary_inputContainer_input:focus {
+    box-shadow: rgba(82, 182, 154, 0.5) 0px 2px 8px 0px;
+    border: 1px solid var(--accent-color-1);
+}
+
+.questionary_inputContainer_input::placeholder {
+    opacity: 0.7;
+}
+
+.questionary_inputContainer_buttons {
+    width: 70%;
+
+
+    gap: 5px;
+    display: flex;
+}
+
+.questionary_inputContainer_button {
+    width: 100%;
+
+    padding: 7px;
+
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--light-color);
+    background-color: var(--primary-color);
+
+    transition: 300ms ease;
+}
+
+.questionary_inputContainer_button:hover {
+    background-color: var(--accent-color-1);
+}
+
+.questionary_idea {
+    width: 70%;
+
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+    background-color: rgb(52, 160, 164, 0.5);
+    
+    transition: 300ms ease;
+}
+
+.questionary_idea:hover {
+    background-color: rgb(52, 160, 164, 0.7);
+}
+
+.questionary_ideaItem {
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}

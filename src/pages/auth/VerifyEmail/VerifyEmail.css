@@ -1,0 +1,83 @@
+.verify {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.verify_container {
+    max-width: 600px;
+
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.verify_title {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.verify_subtitle {
+    opacity: 0.7;
+
+    font-size: 18px;
+    text-wrap: balance;
+    font-weight: 600;
+}
+
+.verify_subcontainer {
+    padding: 30px;
+
+    gap: 10px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.verify_inputGroup {
+    gap: 5px;
+    display: flex;
+}
+
+.verify_inputGroup_input {
+    width: 50px;
+    height: 50px;
+
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    outline: none;
+    border: 1px solid var(--primary-color);
+
+    transition: 300ms ease;
+}
+
+.verify_inputGroup_input:focus {
+    box-shadow: rgba(82, 182, 154, 0.5) 0px 2px 8px 0px;
+    border: 1px solid var(--accent-color-1);
+}
+
+.verify_subcontainerButton {
+    width: 120%;
+
+    padding: 7px;
+
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--light-color);
+    background-color: var(--primary-color);
+
+    transition: 300ms ease;
+}
+
+.verify_subcontainerButton:hover {
+    background-color: var(--accent-color-1);
+}
