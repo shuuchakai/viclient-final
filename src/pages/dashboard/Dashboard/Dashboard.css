@@ -1,0 +1,15 @@
+.dashboard {
+    margin-left: 250px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.dashboard_item {
+    padding: 20px;
+
+    background-color: var(--light-color);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

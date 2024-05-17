@@ -6,6 +6,10 @@ import Signup from './pages/auth/Signup/Signup';
 import Signin from './pages/auth/Signin/Signin';
 import VerifyEmail from './pages/auth/VerifyEmail/VerifyEmail';
 import Questionary from './pages/dashboard/Questionary/Questionary';
+import Dashboard from './pages/dashboard/Dashboard/Dashboard';
+import Tracking from './pages/dashboard/Tracking/Tracking';
+import Workout from './pages/dashboard/Workout/Workout';
+import Profile from './pages/dashboard/Profile/Profile';
 
 function App() {
   return (
@@ -18,6 +22,10 @@ function App() {
         <Route path="/verify-email" element={<VerifyEmail />} />
 
         <Route path="/questionary" element={<Questionary />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/tracking" element={<Tracking />} />
+        <Route path="/workout" element={<Workout />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </Router>
   )

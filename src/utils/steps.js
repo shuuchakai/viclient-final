@@ -122,6 +122,40 @@ const steps = [
             'Las enfermedades crónicas pueden afectar la calidad de vida y la capacidad de realizar actividades diarias, por lo que es importante buscar apoyo emocional y social cuando sea necesario.',
             'Las enfermedades crónicas pueden requerir ajustes en la dieta y el estilo de vida, así como la toma de medicamentos según las indicaciones del médico para mantener la salud y prevenir complicaciones.'
         ]
+    },
+    {
+        question: '¿Tomas alguna medicación?',
+        answerType: 'text',
+        answerKey: 'medication',
+        placeholder: 'Escibe aquí tus medicamentos',
+        idea: [
+            'Es importante informar a tu médico sobre todos los medicamentos que estás tomando, incluidos los de venta libre, los suplementos y las hierbas, para evitar interacciones y efectos secundarios.',
+            'Algunos medicamentos pueden afectar el apetito, el metabolismo y la absorción de nutrientes, lo que puede influir en las necesidades nutricionales y en la respuesta al ejercicio.',
+            'El cumplimiento del régimen de medicación prescrito es fundamental para controlar las enfermedades crónicas y prevenir complicaciones a largo plazo.',
+            'Los cambios en la medicación, la dosis o el horario de administración pueden ser necesarios en función de la respuesta del cuerpo y los cambios en la salud.',
+            'Es importante tener en cuenta los posibles efectos secundarios de la medicación y comunicarse con el médico si experimentas síntomas adversos o cambios en la salud.'
+        ]
+    },
+    {
+        question: '¿Cuántas horas duermes al día?',
+        answerType: 'select',
+        answerKey: 'sleepHours',
+        options: [
+            { value: '4', label: 'Menos de 4 horas' },
+            { value: '5', label: '4-5 horas' },
+            { value: '6', label: '6 horas' },
+            { value: '7', label: '7 horas' },
+            { value: '8', label: '8 horas' },
+            { value: '9', label: '9 horas' },
+            { value: '10', label: 'Más de 9 horas' }
+        ],
+        idea: [
+            'El sueño es crucial para la salud y el bienestar, y la falta de sueño puede tener efectos negativos en la salud física y mental.',
+            'La cantidad de sueño necesaria puede variar según la edad, el estilo de vida y las necesidades individuales, pero la mayoría de los adultos necesitan entre 7 y 9 horas de sueño por noche.',
+            'La calidad del sueño es tan importante como la cantidad, y factores como el ambiente de sueño, la rutina de sueño y la higiene del sueño pueden influir en la calidad del descanso.',
+            'La falta crónica de sueño puede aumentar el riesgo de enfermedades crónicas, como la diabetes, la obesidad y las enfermedades cardíacas, y puede afectar la función cognitiva y el estado de ánimo.',
+            'Establecer una rutina de sueño regular, crear un ambiente propicio para dormir y practicar hábitos de higiene del sueño saludables pueden ayudar a mejorar la calidad y la cantidad de sueño.'
+        ]
     }
 ];
 
