@@ -1,15 +1,18 @@
 .dashboard {
-    margin-left: 250px;
+    margin: 40px 40px 40px 290px;
 
+    gap: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
 }
 
 .dashboard_item {
+    min-height: 320px;
+
     padding: 20px;
 
-    background-color: var(--light-color);
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--light-color);
+    border: 1px solid var(--accent-color-1);
+    box-shadow: rgba(82, 182, 154, 0.5) 0px 2px 8px 0px;
 }

@@ -10,7 +10,7 @@ function Sidebar() {
         localStorage.removeItem('user');
         localStorage.removeItem('token');
 
-        navigate('/login');
+        navigate('/signin');
     };
 
     const user = JSON.parse(localStorage.getItem('user'));
@@ -25,6 +25,7 @@ function Sidebar() {
                         <Link to="/dashboard" className={`sidebar_containerItems_item ${location.pathname === '/dashboard' ? 'sidebar_containerItems_itemActive' : ''}`}>Dashboard</Link>
                         <Link to="/tracking" className={`sidebar_containerItems_item ${location.pathname === '/tracking' ? 'sidebar_containerItems_itemActive' : ''}`}>Seguimiento</Link>
                         <Link to="/workout" className={`sidebar_containerItems_item ${location.pathname === '/workout' ? 'sidebar_containerItems_itemActive' : ''}`}>Rutinas</Link>
+                        <Link to="/diets" className={`sidebar_containerItems_item ${location.pathname === '/diets' ? 'sidebar_containerItems_itemActive' : ''}`}>Dietas</Link>
                         <Link to="/profile" className={`sidebar_containerItems_item ${location.pathname === '/profile' ? 'sidebar_containerItems_itemActive' : ''}`}>Perfil</Link>
                     </nav>
                 </div>

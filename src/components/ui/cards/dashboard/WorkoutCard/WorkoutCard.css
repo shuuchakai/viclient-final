@@ -1,0 +1,79 @@
+.workout_card {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.workout_cardHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.workout_cardHeaderTitle {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.workout_cardHeaderSubtitle {
+    opacity: 0.6;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.workout_cardHeaderButton {
+    margin-top: 10px;
+    padding: 10px 20px;
+
+    text-align: center;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 3px;
+    color: var(--light-color);
+    background-color: var(--primary-color);
+
+    transition: 300ms ease;
+}
+
+.workout_cardHeaderButton:hover {
+    background-color: var(--secondary-color);
+}
+
+.workout_cardDetails {
+    width: 100%;
+
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 3px;
+    background-color: rgb(24, 78, 119, 0.2);
+    cursor: pointer;
+
+    transition: 300ms ease;
+}
+
+.workout_cardDetails:hover {
+    background-color: rgb(24, 78, 119, 0.4);
+}
+
+.workout_cardDetailsTitle {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.workout_cardDetailsExercises {
+    display: flex;
+    flex-direction: column;
+}
+
+.workout_cardDetailsExercises_item {
+    opacity: 0.7;
+    font-size: 15px;
+    font-weight: 500;
+}

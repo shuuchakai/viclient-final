@@ -1,0 +1,80 @@
+.planner {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.planner_header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.planner_headerTitle {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.planner_headerSubtitle {
+    opacity: 0.6;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.planner_headerButton {
+    margin-top: 10px;
+    padding: 10px 20px;
+
+    text-align: center;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 3px;
+    color: var(--light-color);
+    background-color: var(--primary-color);
+
+    transition: 300ms ease;
+}
+
+.planner_headerButton:hover {
+    background-color: var(--secondary-color);
+}
+
+.planner_details {
+    width: 100%;
+
+    gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.planner_detailsCard {
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 3px;
+    background-color: rgb(24, 78, 119, 0.2);
+    cursor: pointer;
+
+    transition: 300ms ease;
+}
+
+.planner_detailsCard:hover {
+    background-color: rgb(24, 78, 119, 0.4);
+}
+
+.planner_detailsCardTitle {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.planner_detailsCardSubtitle {
+    opacity: 0.7;
+    font-size: 15px;
+    font-weight: 500;
+}
