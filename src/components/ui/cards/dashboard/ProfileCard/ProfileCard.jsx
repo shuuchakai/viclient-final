@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './ProfileCard.css';
 
 function ProfileCard() {
-    const user = JSON.parse(localStorage.getItem('user')) || {
+    const user = {
         name: 'Luis Cortés',
         age: 18,
         height: 180,

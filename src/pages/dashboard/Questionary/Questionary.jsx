@@ -1,6 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 import steps from '../../../utils/steps';
+import { API_URL } from '../../../utils/constants';
 
 import './Questionary.css';
 
@@ -8,6 +11,11 @@ function Questionary() {
     const [step, setStep] = useState(0);
     const [answers, setAnswers] = useState({});
     const [currentIdea, setCurrentIdea] = useState(null);
+
+    const navigate = useNavigate();
+
+    const user = JSON.parse(localStorage.getItem('user'));
+    console.log(user.id)
 
     useEffect(() => {
         if (steps[step].idea) {
@@ -33,9 +41,12 @@ function Questionary() {
         }
     };
 
-    const handleSubmit = () => {
-        // Enviar las respuestas
-        console.log(answers);
+    const handleSubmit = async () => {
+        const response = await axios.post(API_URL + "/profile/create", { ...answers, user_id: user.id })
+
+        console.log(response);
+
+        navigate('/dashboard')
     };
 
     return (
@@ -59,6 +70,14 @@ function Questionary() {
                                 placeholder={steps[step].placeholder || ''}
                                 className="questionary_inputContainer_input"
                                 type="text"
+                                onChange={handleAnswer(steps[step].answerKey)}
+                                value={answers[steps[step].answerKey] || ''}
+                            />
+                        )}
+                        {steps[step].answerType === 'date' && (
+                            <input
+                                className="questionary_inputContainer_input"
+                                type="date"
                                 onChange={handleAnswer(steps[step].answerKey)}
                                 value={answers[steps[step].answerKey] || ''}
                             />

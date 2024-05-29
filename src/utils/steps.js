@@ -33,6 +33,14 @@ const steps = [
         ]
     },
     {
+        question: '¿Cuál es tu fecha de nacimiento?',
+        answerType: 'date',
+        answerKey: 'birthday',
+        idea: [
+            'El objetivo es que tengas tu perfil lo más personalizado y específico posible, queremos que sientas esa importancia que le damos a tu bienestar. Además, nos ayuda a comprobar tu edad.'
+        ]
+    },
+    {
         question: '¿Cuál es tu sexo biológico?',
         answerType: 'select',
         answerKey: 'biologicalSex',
@@ -155,6 +163,37 @@ const steps = [
             'La calidad del sueño es tan importante como la cantidad, y factores como el ambiente de sueño, la rutina de sueño y la higiene del sueño pueden influir en la calidad del descanso.',
             'La falta crónica de sueño puede aumentar el riesgo de enfermedades crónicas, como la diabetes, la obesidad y las enfermedades cardíacas, y puede afectar la función cognitiva y el estado de ánimo.',
             'Establecer una rutina de sueño regular, crear un ambiente propicio para dormir y practicar hábitos de higiene del sueño saludables pueden ayudar a mejorar la calidad y la cantidad de sueño.'
+        ]
+    },
+    {
+        question: '¿Cuál es tu ocupación?',
+        answerType: 'text',
+        answerKey: 'occupation',
+        placeholder: 'Escribe aquí tu ocupación',
+        idea: [
+            'La ocupación y el estilo de vida pueden influir en la salud y el bienestar de una persona, ya que determinan la cantidad de actividad física, el nivel de estrés y la exposición a factores de riesgo.',
+            'Algunas ocupaciones pueden requerir largas horas de trabajo sedentario, lo que puede aumentar el riesgo de problemas de salud como la obesidad, la diabetes y las enfermedades cardíacas.',
+            'El estrés laboral y la falta de equilibrio entre el trabajo y la vida personal pueden afectar la salud mental y emocional, lo que destaca la importancia de encontrar un equilibrio saludable.',
+            'Las ocupaciones que implican exposición a sustancias tóxicas, ambientes peligrosos o riesgos para la salud pueden requerir medidas de protección y seguimiento médico regular.',
+            'La elección de una ocupación que sea gratificante, estimulante y compatible con un estilo de vida saludable puede contribuir al bienestar general y la calidad de vida.'
+        ]
+    },
+    {
+        question: '¿Cuáles son tus objetivos de salud?',
+        answerType: 'text',
+        answerKey: 'goals',
+        placeholder: 'Escribe aquí tus objetivos',
+        idea: [
+            'Los objetivos nos ayudan a generarte un perfil mucho más específico y personalizado, no es lo mismo querer aumentar de peso, que aumentar de masa muscular.'
+        ]
+    },
+    {
+        question: '¿Cuál es tu número de teléfono?',
+        answerType: 'text',
+        answerKey: 'phone',
+        placeholder: 'Escribe aquí tu número de teléfono',
+        idea: [
+            'Tu número de teléfono es importante para poder contactarte en caso de emergencia o para enviarte información relevante sobre tu perfil y tus objetivos de salud.'
         ]
     }
 ];

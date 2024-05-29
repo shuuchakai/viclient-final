@@ -1,0 +1,256 @@
+.diets {
+    margin: 40px 40px 40px 290px;
+
+    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.diets_left {
+    width: 100%;
+
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.diets_leftHeader {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.diets_leftHeader_input {
+    width: 100%;
+
+    padding: 10px;
+
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+
+    transition: 300ms ease;
+}
+
+.diets_leftHeader_input:focus {
+    border: 1px solid var(--accent-color-1);
+}
+
+.diets_leftHeader_input::placeholder {
+    opacity: 0.7;
+}
+
+.diets_leftContent {
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.diets_leftContent_card {
+    min-width: 200px;
+
+    padding: 20px;
+
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    flex-direction: column;
+
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    transition: 300ms ease;
+}
+
+.diets_leftContent_card:hover {
+    scale: 1.05;
+    box-shadow: rgba(82, 182, 154, 0.5) 0px 2px 8px 0px;
+}
+
+.diets_modal {
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    margin-left: 40px;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_content {
+    padding: 20px;
+
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    border-radius: 10px;
+    background-color: var(--light-color);
+}
+
+.diets_modalTitle {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.diets_modalItems {
+    gap: 20px;
+    display: flex;
+}
+
+.diets_modalItem {
+    font-size: 18px;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+.diets_modalHeader {
+    display: flex;
+    align-items: center;
+}
+
+.diets_modalPortion {
+    margin-left: 20px;
+}
+
+.diets_leftContent_cardImage {
+    max-width: 120px;
+
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.diets_leftContent_cardTitle {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.diets_leftContent_cardSubtitle {
+    font-size: 18px;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+.diets_leftContent_cardButton {
+    padding: 10px 20px;
+
+    text-align: center;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 3px;
+    color: var(--light-color);
+    background-color: var(--primary-color);
+    cursor: pointer;
+
+    transition: 300ms ease;
+}
+
+.diets_leftContent_cardButton:hover {
+    background-color: var(--accent-color-1);
+}
+
+.diets_modalButtons {
+    gap: 20px;
+    display: flex;
+}
+
+.diets_rightSelected {
+    width: 100%;
+
+    padding: 20px;
+
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.diets_rightSelected_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.diets_rightSelected_headerTitle {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.diets_rightSelected_headerButton {
+    padding: 10px 20px;
+
+    text-align: center;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 3px;
+    color: var(--light-color);
+    background-color: var(--accent-error-color);
+    cursor: pointer;
+
+    transition: 300ms ease;
+}
+
+.diets_rightSelected_headerButton:hover {
+    opacity: 0.6;
+}
+
+.diets_rightSelected_content {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.diets_rightSelected_card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.diets_rightSelected_cardLeft {
+    gap: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.diets_rightSelected_cardImage {
+    max-width: 80px;
+
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.diets_rightSelected_cardTitle {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.diets_rightSelected_cardSubtitle {
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+.diets_rightSelected_cardButton {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--accent-error-color);
+
+    transition: 300ms ease;
+}
+
+.diets_rightSelected_cardButton:hover {
+    opacity: 0.6;
+}

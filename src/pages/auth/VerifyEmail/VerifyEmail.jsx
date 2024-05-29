@@ -2,6 +2,8 @@ import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
+import { API_URL } from '../../../utils/constants';
+
 import './VerifyEmail.css';
 
 function VerifyEmail() {
@@ -36,17 +38,17 @@ function VerifyEmail() {
         if (user && user.email) {
             try {
                 console.log(user.email, verificationCode)
-                const response = await axios.post('https://viserver1-production.up.railway.app/api/users/verify', {
+                const response = await axios.post(API_URL + '/users/confirm', {
                     email: user.email,
-                    code: verificationCode,
+                    token: verificationCode,
                 });
 
                 console.log(response.data)
 
-                if (response.data.success) {
+                if (response.data.message === "Correo electrónico confirmado") {
                     localStorage.setItem('token', response.data.token);
                     navigate("/questionary");
-                }
+                }z
 
             } catch (error) {
                 console.error(error);

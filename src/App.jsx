@@ -10,6 +10,8 @@ import Dashboard from './pages/dashboard/Dashboard/Dashboard';
 import Tracking from './pages/dashboard/Tracking/Tracking';
 import Workout from './pages/dashboard/Workout/Workout';
 import Profile from './pages/dashboard/Profile/Profile';
+import Diets from './pages/dashboard/Diets/Diets';
+import Admin from './pages/admin/Admin';
 
 function App() {
   return (
@@ -26,6 +28,9 @@ function App() {
         <Route path="/tracking" element={<Tracking />} />
         <Route path="/workout" element={<Workout />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/diets" element={<Diets />} />
+
+        <Route path="/admin/dashboard" element={<Admin />} />
       </Routes>
     </Router>
   )

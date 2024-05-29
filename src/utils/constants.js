@@ -1,3 +1,3 @@
-const API_URL = 'https://viserver1-production.up.railway.app/api';
+const API_URL = 'http://localhost:3000/api';
 
 export { API_URL }
